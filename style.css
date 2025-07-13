@@ -18,7 +18,7 @@ body {
 
 /* --- 全体レイアウト --- */
 .container {
-    max-width: 500px;
+    max-width: 768px;
     margin: 0 auto;
     padding: 0 15px;
 }
