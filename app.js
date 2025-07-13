@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const deleteBtn = document.createElement('button');
             deleteBtn.className = 'delete-template-btn';
-            deleteBtn.textContent = '定型文を削除';
+            deleteBtn.textContent = '🗑️';
 
             item.appendChild(nameSpan);
             item.appendChild(previewSpan);
