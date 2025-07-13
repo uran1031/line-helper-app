@@ -245,6 +245,7 @@ input[type="number"] {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     overflow: hidden; /* 角丸を適用するため */
+    flex-wrap: nowrap; /* これを追加 */
 }
 
 .tab-button {
