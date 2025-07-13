@@ -1,0 +1,236 @@
+/* --- 基本設定 --- */
+:root {
+    --primary-color: #00C851;
+    --secondary-color: #6c757d;
+    --background-color: #f0f2f5;
+    --white-color: #ffffff;
+    --border-radius: 8px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: #333;
+}
+
+/* --- 全体レイアウト --- */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+main {
+    padding: 1.5rem 0;
+}
+
+section {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* --- UI要素 --- */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    resize: vertical;
+    box-sizing: border-box; /* paddingを含めてwidth 100%にする */
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00a543;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* --- 機能別スタイル --- */
+
+/* 長文分割 */
+#divider-section .settings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#divider-section .settings label {
+    font-weight: bold;
+}
+
+#divider-section .settings input[type="number"] {
+    width: 80px;
+}
+
+#divide-btn {
+    flex-grow: 1; /* 残りのスペースを埋める */
+}
+
+#result-cards {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-left: 5px solid var(--primary-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+
+.card p {
+    margin: 0 0 1rem 0;
+    white-space: pre-wrap; /* 改行をそのまま表示 */
+    word-wrap: break-word;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.copy-btn, .line-send-btn {
+    flex: 1;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease;
+}
+
+.copy-btn {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+}
+
+.line-send-btn {
+    background-color: #06C755; /* LINEの公式ボタンカラー */
+    color: var(--white-color);
+}
+
+.copy-btn:hover, .line-send-btn:hover {
+    opacity: 0.8;
+}
+
+/* 定型文管理 */
+.template-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.template-form input[type="text"] {
+    width: 100%;
+}
+
+#template-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.template-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.template-item:hover {
+    background-color: #f1f1f1;
+}
+
+.template-item-name {
+    font-weight: bold;
+}
+
+.template-item-preview {
+    font-size: 0.9rem;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 1rem;
+    flex-grow: 1;
+}
+
+.delete-template-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 30px; /* vertically center */
+    text-align: center;
+}
