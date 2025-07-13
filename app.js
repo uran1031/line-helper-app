@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- DOM要素の取得 ---
@@ -12,6 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const templateNameElement = document.getElementById('template-name');
     const saveTemplateButton = document.getElementById('save-template-btn');
     const templateListElement = document.getElementById('template-list');
+
+    // タブUI
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
 
 
     // --- イベントリスナーの設定 ---
@@ -93,6 +96,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 resultCardsElement.innerHTML = '';
             }
         }
+    });
+
+    /**
+     * タブボタンのクリック処理
+     */
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetTabId = button.dataset.tab;
+
+            // すべてのタブボタンからactiveクラスを削除
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            // クリックされたボタンにactiveクラスを追加
+            button.classList.add('active');
+
+            // すべてのタブコンテンツを非表示
+            tabContents.forEach(content => content.classList.remove('active'));
+            // 対象のタブコンテンツを表示
+            document.getElementById(targetTabId).classList.add('active');
+        });
     });
 
 
