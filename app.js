@@ -17,7 +17,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabContents = document.querySelectorAll('.tab-content');
 
 
+    """    const clearTextButton = document.getElementById('clear-text-btn');
+
     // --- イベントリスナーの設定 ---
+
+    /**
+     * 「一括削除」ボタンのクリック処理
+     */
+    clearTextButton.addEventListener('click', () => {
+        if (confirm('本当に入力中のテキストをすべて削除しますか？')) {
+            longTextElement.value = '';
+            resultCardsElement.innerHTML = ''; // 分割結果もクリア
+        }
+    });
+""
 
     /**
      * 「分割する」ボタンのクリック処理
@@ -254,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const deleteBtn = document.createElement('button');
             deleteBtn.className = 'delete-template-btn';
-            deleteBtn.textContent = '🗑️';
+            deleteBtn.textContent = '🗑️'; // アイコンに変更
 
             item.appendChild(nameSpan);
             item.appendChild(previewSpan);

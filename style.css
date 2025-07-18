@@ -88,6 +88,14 @@ button {
     transition: background-color 0.3s ease;
 }
 
+button.danger-btn {
+    background-color: #dc3545;
+}
+
+button.danger-btn:hover {
+    background-color: #c82333;
+}
+
 button:hover {
     background-color: #00a543;
 }
