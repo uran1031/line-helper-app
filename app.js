@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const maxLengthElement = document.getElementById('max-length');
     const divideButton = document.getElementById('divide-btn');
     const resultCardsElement = document.getElementById('result-cards');
+    const clearTextButton = document.getElementById('clear-text-btn');
 
     // 定型文管理機能
     const templateNameElement = document.getElementById('template-name');
@@ -16,8 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
 
-
-    """    const clearTextButton = document.getElementById('clear-text-btn');
 
     // --- イベントリスナーの設定 ---
 
@@ -30,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
             resultCardsElement.innerHTML = ''; // 分割結果もクリア
         }
     });
-""
 
     /**
      * 「分割する」ボタンのクリック処理
